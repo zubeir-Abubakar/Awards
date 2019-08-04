@@ -55,7 +55,7 @@ def project_add(request):
     form=NewProjectForm()
     return render(request,'project-add.html',{'form':form})
 
-class Pro_file (APIView):
+class Pro_file(APIView):
   def get(self,request,format=None):
     all_profiles=Profile.objects.all()
     serializers=ProfileSerializer(all_profiles,many=True)
