@@ -13,7 +13,7 @@ class Project(models.Model):
   def __str__(self):
     return self.name
 
-  def p roject_save(self):
+  def project_save(self):
     self.save()
 
   def project_delete(self):
