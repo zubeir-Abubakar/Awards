@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Project,Profile
 from .forms import NewProfileForm,NewProjectForm
 from rest_framework.response import Response
-from rest_framework.views import APIViews
+from rest_framework.views import APIView
 from .serializer import ProfileSerializer,ProjectSerializer
 from rest_framework import status
 # Create your views here.
@@ -55,7 +55,7 @@ def project_add(request):
     form=NewProjectForm()
     return render(request,'project-add.html',{'form':form})
 
-class Pro_file(APIView):
+class Pro_file (APIView):
   def get(self,request,format=None):
     all_profiles=Profile.objects.all()
     serializers=ProfileSerializer(all_profiles,many=True)
