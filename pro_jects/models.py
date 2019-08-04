@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 
 # Create your models here.
-class Projects(models.Model):
+class Project(models.Model):
   name=models.CharField(max_length=40)
   image=models.ImageField(upload_to='projects/',default='tech.jpeg')
   user=models.ForeignKey(User,on_delete=models.CASCADE)
@@ -13,7 +13,7 @@ class Projects(models.Model):
   def __str__(self):
     return self.name
 
-  def project_save(self):
+  def p roject_save(self):
     self.save()
 
   def project_delete(self):
