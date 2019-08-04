@@ -5,8 +5,8 @@ from .models import Project,Profile
 from .forms import NewProfileForm,NewProjectForm
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .serializer import ProfileSerializer,ProjectSerializer
-from rest_frameworks import status
+from .serializer import ProfileSerializer
+from rest_framework import status
 # Create your views here.
 
 def home(request):
