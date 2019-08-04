@@ -1,0 +1,45 @@
+<style>
+.container{background:rgb(83, 89, 165); border-radius: 50px;
+font-weight: bold;font-size: large; color:white;
+}
+</style>
+{%extends "registration/base.html"%} 
+{% load bootstrap3 %}
+{% block content %}
+<div class="container">
+  <div class="row auth">
+    <!-- Empty div -->
+    <div class="col-md-10"></div>
+    <div class="col-md-8" style="margin-left:200px;">
+      {% if form.errors %}
+        <p> Some Information Might be Incorrect </p>
+      {% endif %}
+      <div class="card">
+
+        <div class="card-title">
+          <h3 class="text-center" style="background:gold; font-style: italic">Sign Up</h3>
+        </div>
+        <div class="card-body" style="margin-left:30px; margin-right:30px;">
+
+          <form  action="/accounts/register/" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-sm" value="Sign Up" style="font-size:large;">
+            </div>
+
+            <input type="hidden" name="next" value="{{next}}">
+            <p class="text-center">Have an account? <a href="/accounts/login/" style="font-style:italic; color:green">Sign In</a></p>
+          </form>
+
+        </div>
+        
+      </div>
+
+    </div>
+    <!-- empty div -->
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+{% endblock %}

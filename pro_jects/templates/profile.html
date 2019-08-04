@@ -1,0 +1,96 @@
+<style>
+*{
+  font-size:larger;
+}
+</style>
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Awards</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row user-profile">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-1"></div>
+               <div>
+                 {% for profile in profile %}
+                 <img src="{{profile.prof_pic.url}}" id="p-image" class="img-fluid rounded-circle"><a
+                   href="{% url 'newProfile'%}"><button class="btn btn-outline-warning" style="border-radius:20px; font-size:large">Edit
+                     Profile</button></a>
+                 {% endfor %}
+               </div>
+            <div class="col-md-10">
+              
+            <div class="col-md-1"></div>          
+          </div>
+          <div class="row profile-sec">            
+            
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+              
+              
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-12"> 
+              <div id="details" class="text-center" style="background:rgb(83, 89, 165); border-radius: 50px;
+                font-weight: bold;font-size: large;width: 1000px;margin-bottom: 30px; margin-top:
+                50px">
+                {% for profile in profile %}
+                <h3 style="text-decoration: underline; color:white">{{profile.name}}</h3>
+                <p>Contact: {{profile.contact}}</p>
+                <h4 style="text-decoration:underline">Bio</h4>
+                <p>{{profile.bio}}</p>
+                {% endfor %}
+              </div>  
+           
+              
+            </div>            
+          </div>
+            <div class="col-md-1"></div>       
+            
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="row user-projects">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <a href="{% url 'newProject' %}"><button class="btn btn-outline-warning" style="margin-left:500px;width:100px; border-radius: 30px; font-size:large;margin-bottom: 10px">Add Project</button></a>
+          </div>
+          <div class="col-md-1"></div>          
+        </div>
+        <div class="row">
+          {% for project in projects %}
+          <div class="col-md-6">
+            
+            <div class="card">
+              <!-- Card image -->             
+              <h4 class="card-title text-center" style="padding:1%;"><a href="{{project.link}}">{{project.name}}</a></h4>
+              <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
+            
+              <!-- Card content -->
+              <div class="card-body">        
+                <p class="card-text">{{project.description}}</p>
+              </div> 
+                           
+            </div>
+            
+          </div>
+          {% endfor %}     
+      </div>
+    </div>
+    </div>
+  </body>
+  </html>
+{% endblock %}

@@ -1,0 +1,81 @@
+<style>
+    .were{
+    margin-right: 800px;
+    border-radius: 30px;
+    }
+/* .were:hover{
+    background: green;
+    margin-right: 800px;
+    border-radius: 40px;
+    color: black;
+} */
+*{
+    font-size: large;
+    
+
+}
+.nav-item:hover{
+    background: rgb(10, 167, 57);
+    border-radius:20px; 
+    color: black
+}
+body{
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzeXg3mcbrJAB9bJe7asHc1k0J83LDX9zMigR_YNrM9YhDyQga");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
+<nav class="navbar navbar-expand-lg">
+  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <a style="background:midnightbl" class="navbar-brand mr-auto" href="/" id="home"><img
+              src="https://i1.wp.com/composersinc.org/wordpress/wp-content/uploads/2014/04/award.jpg" width="40px">
+          <strong>AWARDS</strong></a>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button> -->
+  </div> 
+  <div class="mx-auto order-0">
+      <form class="form-inline mx-auto" role="search" action="" id="f-search" style="margin-top: 40px;">
+          <div class="">
+              <input class="form-control mr-sm-2" type="text" id="search-place" placeholder="Search User"
+                  aria-label="Search" name="search" style="width:400px;font-size: large; text-align: center">
+                  <div class="were"><button type="button"
+                  class="btn btn-outline-success" style="border-radius: 20px; font-size: large">Search</button>
+
+              </div>
+          </div>
+          
+      </form>
+  </div>        
+  <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        {% if user.is_authenticated%}
+        
+          <li class="nav-item" style="color:black">
+              <a class="btn btn-outline-success" style="border-radius:20px;" href="/logout" id="out"
+                  style="font-style:italic;"><i
+                      class="fas fa-sign-out-alt" style="font-size: x-large; color: #000;"> logout</i></a>
+          </li>
+          <li class="nav-item" id="p-icon">
+              <a class="nav-link waves-effect waves-light" href="{% url 'profile' %}" ><img src="https://img.icons8.com/material-rounded/24/000000/user.png" width="50px"></a>
+          </li>
+          {% else %}
+          <li class="nav-item" style="margin-right: 10px;">
+              <a class='btn btn-outline-success' style="border-radius:20px;" href="/accounts/login" id="in"><i
+                      class="fas fa-sign-in-alt" style="font-size: x-large; color: #000;"> login</i>
+
+              </a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="btn btn-outline-success" style="border-radius:20px;" href="/accounts/register/" id="signup"
+                  style="font-size:large; font-style:italic"><i class="fas fa-user-plus"
+                      style="font-size: x-large; color: #000;" > signup</i></a>
+          </li>
+          {% endif %}         
+          
+      </ul>
+    </div>
+       
+</nav>

@@ -1,0 +1,55 @@
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% if title %}
+  <title>{{title}}</title>
+  {% else %}  
+  <title>Awards</title>
+  {% endif %}
+
+  {% block styles %}
+    {% bootstrap_css %}
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Fredoka+One|Patrick+Hand&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  {% endblock %}
+</head>
+<body>
+  {% include 'navbar.html' %}
+  {% block content %}
+
+  {% endblock %}
+  {% include 'footer.html' %}
+  
+
+  {% block script %}
+    {% bootstrap_javascript %}
+    <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/js/mdb.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
+
+  {% endblock %}
+  
+</body>
+</html>
