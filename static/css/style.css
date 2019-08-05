@@ -1,0 +1,168 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* font-family: 'Fredoka One', cursive; */
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+h2{
+    color: brown
+}
+
+#signup,
+#in,
+#home,
+#out {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.navbar {
+    font-family: 'Fredoka One';
+}
+
+.page-footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+.card {
+    background-color:black;
+    color: black;
+    margin-bottom: 1%;
+}
+
+#header {
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.md-form {
+    display: inline-block;
+}
+
+.auth,
+.new-add,
+.user-profile {
+    margin-top: 3%;
+}
+
+.new-add {
+    color: white;
+}
+
+.proj-btns li {
+    display: inline-block;
+}
+
+.welcome-text {
+    opacity: 0;
+    font-size: 1.5em;
+}
+
+.headline {
+    margin: 20px;
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#intro {
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+#p-image {
+    background-image: url('../images/default-avatar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid cyan;
+    height: 350px;
+    width: 350px;
+}
+
+#p-icon {
+    background-color: aliceblue;
+    background-blend-mode: lighten;
+}
+
+#projects {
+    margin-top: 2%;
+    margin-right: 40%;
+    margin-left: 40%;
+    padding: 2%;
+}
+
+#details {
+    background-color: rgb(224, 255, 255);
+    color: black;
+    box-shadow: 2px 3px 3px cyan;
+    padding: 2%;
+}
+
+.user-projects {
+    padding: 3%;
+    margin-top: 3%;
+    border: 2px solid whitesmoke;
+    margin: 3%;
+}
+
+.rating ul li {
+    text-decoration: none;
+}
+
+.rate-score,
+.data-rating {
+    border-radius: 50px;
+}
+
+.star {
+    color: goldenrod;
+    font-size: 2.0rem;
+    padding: 0 1rem;
+    /* space out the stars */
+}
+
+.star::before {
+    content: '\2606';
+    /* star outline */
+    cursor: pointer;
+}
+
+.star.rated::before {
+    /* the style for a selected star */
+    content: '\2605';
+    /* filled star */
+}
+
+.stars {
+    counter-reset: rateme 0;
+    font-size: 2.0rem;
+    font-weight: 900;
+}
+
+.star.rated {
+    counter-increment: rateme 1;
+}
+
+.stars::after {
+    content: counter(rateme) '/5';
+}
+
+.more {
+    display: none;
+}
+
+.more-click:hover {
+    text-decoration: underline;
+    color: blue;
+}
