@@ -55,7 +55,7 @@
    width="500px" height="200px" style="margin-left: 500px;"> -->
    <div>
      <div class="container-fluid"
-       style="background:url(https://image.freepik.com/free-photo/laptop-with-cup-coffee-view-from_426-19315254.jpg); height: 400px; width: 90%;border: 3px solid
+       style="background:black; height: 400px; width: 90%;border: 3px solid
         rgb(128, 201, 32); background-repeat: no-repeat; background-size: contain;background-size: cover; background-attachment:fixed" >
       <div class="row text-center" id="header">
         <div class="col-md-2"></div>
@@ -99,7 +99,7 @@
                       style="color:black; ">{{project.user.username}}</cite>*</p>
                   <a>
                     <p class="more-click"><button style=" margin-left: 150px; font-size: large;border-radius: 30px; background: black" 
-                        class="btn btn-outline-success">View More</button>
+                        class="btn btn-outline-success"> Rate now</button>
                     </p>
                   </a>
                   <div class="more" style="background:black; color:cornsilk">
@@ -107,46 +107,47 @@
                   <p>Contact:<strong> {{profile.contact}}</strong></p>
                   {% endfor %}
                  <span class="rating">
-                   <p class="text-center"><b>Ratings <img
+                   <p class="text-center"><b>Ratings<img
                        src="https://images.theconversation.com/files/105003/original/image-20151209-3251-lyw71w.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
                        width="50px"></b></p>
                    <ul>
-                     <p>Design <button class="btn btn-outline-info rate-score">0</button>
-                       <div class="stars" data-rating="3">
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                       </div>
-                     </p>
-                     <p>Usability <button class="btn btn-outline-info rate-score">0</button>
-                       <div class="stars" data-rating="3">
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                       </div>
-                     </p>
-                     <p>Content <button class="btn btn-outline-info rate-score">0</button>
-                       <div class="stars" data-rating="3">
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                         <span class="star">&nbsp;</span>
-                       </div>
-                     </p>
-                   </ul>
-                 </span>
+               <p>Design <button class="btn btn-outline-success rate-score">0</button>
+                 <div class="stars" data-rating="3">
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
                  </div>
+               </p>
+               <p>Usability <button class="btn btn-outline-success rate-score">0</button>
+                 <div class="stars" data-rating="3">
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
                  </div>
+               </p>
+               <p>Content <button class="btn btn-outline-success rate-score">0</button>
+                 <div class="stars" data-rating="3">
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
+                   <span class="star">&nbsp;</span>
                  </div>
-                 </div>
-                 {%endfor%}
+               </p>
+               </ul>
+               </span>
+               </div>
+               </div>
+               </div>
+               </div>
+               {%endfor%}
 
 
-                 </div>
-                 </div>
-                 {% endblock %}
+               </div>
+               </div>
+               {% endblock %}
+
