@@ -55,7 +55,7 @@ function setRating(ev){
       if(match){
           star.classList.remove('rated');
       }else{
-          star.classList.add('rated');
+          star.classList.add('d');
       }
       //are we currently looking at the span that was clicked
       if(star === span){
