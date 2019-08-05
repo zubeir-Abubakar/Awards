@@ -32,3 +32,4 @@ The application is built on:
 
 ### Support and contact details
 For any queries and suggestions on how we could improve on the application, please contact the support team via Tel No: +254 74304678 or Email: zubkayare@gmail.com Any comment on what you liked or feel should have been placed better is appreciated. Tips and other code tricks are welcomed as well.
+
