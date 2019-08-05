@@ -24,8 +24,8 @@
             <div class="col-md-1"></div>
                <div>
                  {% for profile in profile %}
-                 <img src="{{profile.prof_pic.url}}" id="p-image" class="img-fluid rounded-circle"><a
-                   href="{% url 'newProfile'%}"><button class="btn btn-outline-warning" style="border-radius:20px; font-size:large">Edit
+                 <img src="{{profile.prof_pic.url}}" style="width:300px; height:300px; margin-left:70px;" id="p-image" class="img-fluid rounded-circle" style=""><a
+                   href="{% url 'newProfile'%}"><button class="btn btn-outline-success" style="border-radius:20px; font-size:large; background:black">Edit
                      Profile</button></a>
                  {% endfor %}
                </div>
@@ -66,7 +66,7 @@
         <div class="row">
           <div class="col-md-1"></div>
           <div class="col-md-10">
-            <a href="{% url 'newProject' %}"><button class="btn btn-outline-warning" style="margin-left:500px;width:100px; border-radius: 30px; font-size:large;margin-bottom: 10px">Add Project</button></a>
+            <a href="{% url 'newProject' %}"><button class="btn btn-outline-success" style="margin-left:500px;width:100px; border-radius: 30px; font-size:large;margin-bottom: 10px; background: black">Add Project</button></a>
           </div>
           <div class="col-md-1"></div>          
         </div>
