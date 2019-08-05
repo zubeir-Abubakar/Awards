@@ -24,7 +24,7 @@
             <div class="col-md-1"></div>
                <div>
                  {% for profile in profile %}
-                 <img src="{{profile.prof_pic.url}}" style="width:300px; height:300px; margin-left:70px;" id="p-image" class="img-fluid rounded-circle" style=""><a
+                 <img src="{{profile.prof_pic.url}}" style="width:300px; height:300px; margin-left:70px;" id="p-image" class="img-fluid rounded-circle"><a
                    href="{% url 'newProfile'%}"><button class="btn btn-outline-success" style="border-radius:20px; font-size:large; background:black">Edit
                      Profile</button></a>
                  {% endfor %}
