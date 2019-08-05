@@ -15,8 +15,8 @@ import django_heroku
 import dj_database_url
 from decouple import config,Csv
 
-# MODE=config("MODE", default="dev")
-# SECRET_KEY = config('SECRET_KEY')
+MODE=config("MODE", default="dev")
+SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 # development
 # if config('MODE')=="dev":
@@ -33,18 +33,18 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 #    }
 # # production
 # else:
-#    DATABASES = {
-#        'default': dj_database_url.config(
-#            default=config('DATABASE_URL')
-#        )
-#    }
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+}
 
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
-# ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
