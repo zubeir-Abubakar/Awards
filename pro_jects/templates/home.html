@@ -3,6 +3,11 @@
   font-size: larger;
 }
 
+@media screen and (min-width: 480px) {
+  body{
+    overflow: scroll;
+  }
+}
 </style>
 {% extends 'base.html' %}
 
@@ -71,12 +76,12 @@
     </div><br>
     
         <div class="row text-center p-title" id="projects" style="color:cyan ;">
-          <h2 class="text-center" style="border: 3px solid rgb(180, 187, 171); padding: 2%; margin: 0 auto; background: black; border-radius: 30px" >Most recommended and rated</h2><br>
+          <h3 class="text-center" style="border: 3px solid rgb(180, 187, 171); padding: 2%; margin: 0 auto; background: black; border-radius: 30px" >Most recommended and rated</h3><br>
         </div><br>
         <div class="row">
           
             {%for project in projects%}
-            <div class="col-md-4" >
+            <div class="col-md-4 col-sm-12" >
               <div class="card">
                 <!-- Card image -->             
                 <h3 class="card-title text-center" style="padding:1%; background:black; color:white;"><a><em><strong></strong>{{project.name}}</em></a>
@@ -97,7 +102,7 @@
                         class="btn btn-outline-success">View More</button>
                     </p>
                   </a>
-                  <div class="more">
+                  <div class="more" style="background:black; color:cornsilk">
                   {% for profile in profiles%}
                   <p>Contact:<strong> {{profile.contact}}</strong></p>
                   {% endfor %}
